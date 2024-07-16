@@ -46,7 +46,7 @@ class TrabajadorController extends Controller
         ORDER BY cantidad_asignaciones DESC
     ");
 
-    return view('estadisticas.trabajadores', ['resultados' => $resultados]);
+    return view('trabajador.frmtrabajador', ['resultados' => $resultados]);
 }
 
     /**
