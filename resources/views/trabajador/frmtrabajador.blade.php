@@ -52,14 +52,10 @@
 <body>
 @extends('app3')
 @section('content')
-    <div class="container">
         <h2>Estadísticas de Trabajadores</h2>
-
         <div>
             <canvas id="grafico-pastel"></canvas>
         </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
