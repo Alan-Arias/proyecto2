@@ -12,7 +12,7 @@
     <br>
     @if(!empty($AsignacionServicio->id))
     @else
-    <form action="/RegAsigServ" method="POST">
+    <form action="{{ url('/RegAsigServ') }}" method="POST">
     @csrf
         <table>
             <tr>
