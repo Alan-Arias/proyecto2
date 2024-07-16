@@ -74,7 +74,7 @@
                 <tr>
                     <td>Tipo de Usuario</td>
                     <td>
-                        <select name="tipo_user" id="tipo_user">
+                        <select name="tipo_user" id="tipo_user" onchange="updateDescUser()>
                             <option value="1">Trabajador</option>
                         </select>
                     </td>
