@@ -19,7 +19,7 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-12 text-center">
             <h3>PagoFacil QR y Tigo Money</h3>                
             <div class="card">
-                <form class="form-card" action="/consumirServicio" method="POST" target="QrImage" id="segundoFormulario">
+                <form class="form-card" action="{{ url('/consumirServicio') }}" method="POST" target="QrImage" id="segundoFormulario">
                     @csrf
                     @php
                         $formData = session('formData');
