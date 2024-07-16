@@ -186,7 +186,12 @@
         @endif
     @endforeach
 </table>
-
+@if ($totalCosto > 0)
+    <form id="sumaCostosForm" action="{{ url('/payment') }}" method="get">
+        <input type="hidden" name="monto" value="{{ $totalCosto }}">
+        <button type="submit" class="btn btn-primary mt-3">Pagar Total</button>
+    </form>
+@endif
     <!--<h2>Tabla Reservas</h2>
     <table class="table table-striped" border="1">
     <tr>        
