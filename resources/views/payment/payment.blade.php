@@ -74,9 +74,8 @@
             <td><input type="text" name="monto" id="monto" value="{{ request()->input('monto') }}" readonly></td>
         </tr>
         <tr>
-            <td>Servicio</td>
-            <td><input type="text" id="productoInput" name="pedido_detalle[producto]"></td>
-            <td><button type="button" class="btn btn-primary mt-2" onclick="openServiceModal()">Seleccionar</button></td>
+            <td>Pago por Concepto</td>
+            <td><input type="text" id="productoInput" name="pedido_detalle[producto]" readonly></td>        
         </tr>
         <tr>
             <td><input type="submit" value="Guardar" class="btn btn-primary"></td>
