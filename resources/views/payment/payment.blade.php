@@ -58,7 +58,7 @@
 @include('app')
 
 <!-- Formulario -->
-<form id="primerFormulario" action="/GuardarDatos" method="post">
+<form id="primerFormulario" action="{{ url('/GuardarDatos') }}" method="post">
     @csrf
     <table>
         <tr>
