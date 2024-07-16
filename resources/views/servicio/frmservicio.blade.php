@@ -15,7 +15,7 @@
     <h2>Registro de Servicios</h2>
     <br>
     @if(isset($Servicios->id))
-    <form action="{{ url('/ActualizarServicio/{{ $Servicios->id }}') }}" method="POST">
+    <form action="{{ url('/ActualizarServicio/'{{ $Servicios->id }} ) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
