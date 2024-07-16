@@ -9,43 +9,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fas fa-cogs me-2"></i> Taller Servimag</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-users me-1"></i>Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/cliente') }}"><i class="fas fa-address-card me-1"></i>Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-hard-hat me-1"></i>Trabajador</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/vehiculos') }}"><i class="fas fa-car me-1"></i>Reservas y Vehiculos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-cogs me-1"></i>Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url( '/promocion') }}"><i class="fas fa-tag me-1"></i>Promociones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-info-circle me-1"></i>Detalles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/login') }}"><i class="fas fa-info-circle me-1"></i>Login</a>
-                    </li>
-                </ul>
-                
-            </div>
-        </div>
-</nav>
+@extends('app3')
+
+@section('content')
     <h2>Registro de Promociones</h2>
     <br>
     @if(!empty($Promocion->id))
@@ -113,5 +79,6 @@
     <!--script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--script -->
+    @endsection 
 </body>
 </html>
