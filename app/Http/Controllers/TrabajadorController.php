@@ -36,18 +36,6 @@ class TrabajadorController extends Controller
     {
         //
     }
-    public function verEstadisticasTrabajadores()
-{
-    $resultados = DB::select("
-        SELECT t.nombres AS nombre_trabajador, COUNT(asig.id_servicio) AS cantidad_asignaciones
-        FROM asignacion_servicios asig
-        INNER JOIN trabajadors t ON asig.id_trabajador = t.id
-        GROUP BY t.nombres
-        ORDER BY cantidad_asignaciones DESC
-    ");
-
-    return view('trabajador.frmtrabajador', ['resultados' => $resultados]);
-}
 
     /**
      * Store a newly created resource in storage.
