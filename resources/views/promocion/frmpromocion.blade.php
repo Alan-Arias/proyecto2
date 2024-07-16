@@ -18,28 +18,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/users"><i class="fas fa-users me-1"></i>Usuarios</a>
+                        <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-users me-1"></i>Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cliente"><i class="fas fa-address-card me-1"></i>Clientes</a>
+                        <a class="nav-link" href="{{ url('/cliente') }}"><i class="fas fa-address-card me-1"></i>Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/trabajadors"><i class="fas fa-hard-hat me-1"></i>Trabajador</a>
+                        <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-hard-hat me-1"></i>Trabajador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/vehiculos"><i class="fas fa-car me-1"></i>Reservas y Vehiculos</a>
+                        <a class="nav-link" href="{{ url('/vehiculos') }}"><i class="fas fa-car me-1"></i>Reservas y Vehiculos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/servicios"><i class="fas fa-cogs me-1"></i>Servicios</a>
+                        <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-cogs me-1"></i>Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/promocion"><i class="fas fa-tag me-1"></i>Promociones</a>
+                        <a class="nav-link" href="{{ url( '/promocion') }}"><i class="fas fa-tag me-1"></i>Promociones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/detalle"><i class="fas fa-info-circle me-1"></i>Detalles</a>
+                        <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-info-circle me-1"></i>Detalles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login"><i class="fas fa-info-circle me-1"></i>Login</a>
+                        <a class="nav-link" href="{{ url('/login') }}"><i class="fas fa-info-circle me-1"></i>Login</a>
                     </li>
                 </ul>
                 
