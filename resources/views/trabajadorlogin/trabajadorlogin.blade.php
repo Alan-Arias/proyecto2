@@ -16,13 +16,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">                    
                 <li class="nav-item">
-                    <a class="nav-link" href="/vehiculosview"><i class="fas fa-car me-1"></i>Ver Vehículos</a>
+                    <a class="nav-link" href="{{ url('/vehiculosview') }}"><i class="fas fa-car me-1"></i>Ver Vehículos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/asignacionserview"><i class="fas fa-money-bill-alt me-1"></i>Asignacion de Servicios</a>
+                    <a class="nav-link" href="{{ url('/asignacionserview') }}"><i class="fas fa-money-bill-alt me-1"></i>Asignacion de Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/trabjview"><i class="fas fa-money-bill-alt me-1"></i>Trabajadores</a>
+                    <a class="nav-link" href="{{ url('/trabjview') }}"><i class="fas fa-money-bill-alt me-1"></i>Trabajadores</a>
                 </li>
             </ul>
         </div>
