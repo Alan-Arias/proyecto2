@@ -18,7 +18,7 @@
     @else
     <div class="container">
     <div class="form-container">
-        <form action="/registrarVehiculo" method="POST" class="forms">
+        <form action="{{ url('/registrarVehiculo') }}" method="POST" class="forms">
             @csrf
             <div>
                 <h2>Registro de Vehículo</h2>
@@ -82,7 +82,7 @@
     <div hidden>
             <h2>Asignación de Servicios</h2>
                 <table>
-                    <form action="/registrarServicio" method="POST">
+                    <form action="{{ url('/registrarServicio') }}" method="POST">
                     <tr>
                         <td>Fecha Actual</td>
                         <td><input type="date" id="fecha_asignacion" name="fecha_asignacion"></td>
