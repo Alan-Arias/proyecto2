@@ -15,7 +15,7 @@
     <h2>Registro de Servicios</h2>
     <br>
     @if(isset($Servicios->id))
-    <form action="{{ url('/ActualizarServicio/'{{ $Servicios->id }} ) }}" method="POST">
+    <form action="{{ url('/ActualizarServicio/' . $Servicios->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -98,7 +98,7 @@
                 <td>{{ $item->duracion_estimada }}</td>
                 <td>{{ $item->estado }}</td>
                 <td>
-                    <a href="{{ url('/servicio/editar/'{{ $item->id }}) }}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ url('/servicio/editar/' . {{ $item->id }}) }}" class="btn btn-primary btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach
