@@ -57,7 +57,6 @@
 <body class="antialiased">
 @include('app')
 
-<!-- Formulario -->
 <form id="primerFormulario" action="{{ url('/GuardarDatos') }}" method="post">
     @csrf
     <table>
@@ -65,7 +64,6 @@
             <td>Razon Social</td>
             <td><input readonly type="text" id="tcRazonSocial" name="tcRazonSocial" placeholder="Nombre del Usuario"></td>
             <td><input type="hidden" id="cliente_id" name="cliente"></td>
-            <!--<td><button type="button" class="btn btn-primary mt-2" onclick="openClienteModal()">Seleccionar Cliente</button></td>-->
         </tr>
         <tr>
             <td>Correo</td>
@@ -73,11 +71,11 @@
         </tr>
         <tr>
             <td>Monto</td>
-            <td><input readonly type="text" name="monto" id="monto"></td>
+            <td><input type="text" name="monto" id="monto" value="{{ request()->input('monto') }}" readonly></td>
         </tr>
         <tr>
             <td>Servicio</td>
-            <td><input readonly type="text" id="productoInput" name="pedido_detalle[producto]" ></td>
+            <td><input type="text" id="productoInput" name="pedido_detalle[producto]"></td>
             <td><button type="button" class="btn btn-primary mt-2" onclick="openServiceModal()">Seleccionar</button></td>
         </tr>
         <tr>
@@ -86,6 +84,12 @@
     </table>
 </form>
 
+<script>
+    // Script para establecer el valor predeterminado de productoInput
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('productoInput').value = 'Pago Taller Servimag';
+    });
+</script>
 <!-- Modal de Selección de Cliente -->
 <div class="modal fade" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
