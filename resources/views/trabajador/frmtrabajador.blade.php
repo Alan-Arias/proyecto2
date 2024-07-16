@@ -59,22 +59,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">                    
                 <li class="nav-item">
-                    <a class="nav-link" href="/users"><i class="fas fa-user"></i> Gestionar Usuarios</a>
+                    <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-user"></i> Gestionar Usuarios</a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link" href="/trabajadors"><i class="fas fa-users"></i> Gestionar Trabajadores</a>
+                    <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-users"></i> Gestionar Trabajadores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/servicios"><i class="fas fa-cogs"></i> Gestionar Servicios</a>
+                    <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-cogs"></i> Gestionar Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/GestionarVehiculos"><i class="fas fa-car"></i> Gestionar Vehiculos</a>
+                    <a class="nav-link" href="{{ url('/GestionarVehiculos') }}"><i class="fas fa-car"></i> Gestionar Vehiculos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/detalle"><i class="fas fa-info-circle"></i> Gestionar Detalles Vehiculo</a>
+                    <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-info-circle"></i> Gestionar Detalles Vehiculo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reserva"><i class="fas fa-calendar-alt"></i> Gestionar Reservas</a>
+                    <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-alt"></i> Gestionar Reservas</a>
                 </li>
             </ul>
         </div>
@@ -86,7 +86,7 @@
     <div class="form-container">
         @if(!empty($Trabajador->id))
         @else
-        <form action="/registrarTr" method="POST">
+        <form action="{{ url('/registrarTr') }}" method="POST">
             @csrf
             <table>
                 <tr>
