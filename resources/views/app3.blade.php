@@ -9,13 +9,50 @@
     <style>
         body.dark-mode {
             background-color: #121212;
-            color: #ffffff;
+            color: #e0e0e0;
         }
         .dark-mode .navbar {
             background-color: #343a40;
         }
         .dark-mode .table {
-            color: #ffffff;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .dark-mode .table thead {
+            background-color: #2c2c2c;
+        }
+        .dark-mode .table tbody tr {
+            border-bottom: 1px solid #444;
+        }
+        .dark-mode .table tbody tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+        .dark-mode .table tbody tr:hover {
+            background-color: #333;
+        }
+        .dark-mode .btn-outline-light {
+            border-color: #e0e0e0;
+            color: #e0e0e0;
+        }
+
+        /* Themes */
+        body.theme-kids {
+            background-color: #FFEB3B;
+            color: #000;
+            font-size: 16px;
+        }
+        body.theme-teens {
+            background-color: #00BCD4;
+            color: #FFF;
+            font-size: 18px;
+        }
+        body.theme-adults {
+            background-color: #3E2723;
+            color: #FFF;
+            font-size: 20px;
+        }
+        .theme-kids .navbar, .theme-teens .navbar, .theme-adults .navbar {
+            background-color: inherit;
         }
     </style>
 </head>
@@ -46,13 +83,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promociones</a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <button class="btn btn-outline-light" id="darkModeToggle"><i class="fas fa-moon"></i> Modo Oscuro</button>
+                    </li>
+                    <li class="nav-item">
+                        <select class="form-control" id="themeSelector">
+                            <option value="default">Seleccionar Tema</option>
+                            <option value="theme-kids">Niños</option>
+                            <option value="theme-teens">Jóvenes</option>
+                            <option value="theme-adults">Adultos</option>
+                        </select>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -64,27 +106,50 @@
 
     <div class="container mt-4">
         @yield('content')
+        <div class="mt-4">
+            <p id="visitorCount"></p>
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Check the localStorage for dark mode preference
+            // Handle dark mode
             if (localStorage.getItem('dark-mode') === 'true') {
                 document.body.classList.add('dark-mode');
                 document.getElementById('darkModeToggle').innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
             }
 
-            // Toggle dark mode
             document.getElementById('darkModeToggle').addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
                 let isDarkMode = document.body.classList.contains('dark-mode');
                 localStorage.setItem('dark-mode', isDarkMode);
                 this.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i> Modo Claro' : '<i class="fas fa-moon"></i> Modo Oscuro';
             });
+
+            // Handle theme selection
+            const selectedTheme = localStorage.getItem('theme');
+            if (selectedTheme) {
+                document.body.classList.add(selectedTheme);
+                document.getElementById('themeSelector').value = selectedTheme;
+            }
+
+            document.getElementById('themeSelector').addEventListener('change', function() {
+                document.body.classList.remove('theme-kids', 'theme-teens', 'theme-adults');
+                const theme = this.value;
+                if (theme !== 'default') {
+                    document.body.classList.add(theme);
+                }
+                localStorage.setItem('theme', theme);
+            });
+
+            // Visitor count
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount++;
+            localStorage.setItem('visitCount', visitCount);
+            document.getElementById('visitorCount').textContent = `Número de visitas: ${visitCount}`;
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
