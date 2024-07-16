@@ -12,7 +12,9 @@
 @section('title', 'Inicio')
 
 @section('content')
-
+@php
+    $clienteNombre = session('nombres');
+@endphp
 @if(!empty($asignacionserviciotabla->id))
 @else
 @endif
@@ -25,6 +27,7 @@
             <th>Servicio</th>
         </tr>
         @foreach ($AsignacionServicio as $item)
+        @if (strpos($item->trabajador->nombres, $clienteNombre) !== false)
         <tr>
             <td>{{ $item ->id }}</td>
             <td>{{ $item ->fecha_asignacion }}</td>
@@ -32,6 +35,7 @@
             <td>{{ $item ->trabajador->nombres }}</td>
             <td>{{ $item ->servicio->nombre }}</td>
         </tr>
+        @endif
         @endforeach
     </table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
