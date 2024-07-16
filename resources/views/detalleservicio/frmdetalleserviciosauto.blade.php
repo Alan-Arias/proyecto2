@@ -89,7 +89,7 @@
 
 <h2>Registro de Detalle</h2>
 <br>
-<form id="detalleForm" action="/registrarDetalle" method="POST">
+<form id="detalleForm" action="{{ url('/registrarDetalle') }}" method="POST">
     @csrf
     <table class="table">
         <tr>
