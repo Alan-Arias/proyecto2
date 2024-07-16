@@ -7,6 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* Modo oscuro */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
@@ -35,7 +36,7 @@
             color: #e0e0e0;
         }
 
-        /* Themes */
+        /* Temas */
         body.theme-kids {
             background-color: #FFEB3B;
             color: #000;
@@ -121,6 +122,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promociones</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -151,7 +155,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Handle dark mode
+            // Modo oscuro
             if (localStorage.getItem('dark-mode') === 'true') {
                 document.body.classList.add('dark-mode');
                 document.getElementById('darkModeToggle').innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
@@ -164,7 +168,7 @@
                 this.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i> Modo Claro' : '<i class="fas fa-moon"></i> Modo Oscuro';
             });
 
-            // Handle theme selection
+            // Selección de tema
             const selectedTheme = localStorage.getItem('theme');
             if (selectedTheme) {
                 document.body.classList.add(selectedTheme);
@@ -180,7 +184,7 @@
                 localStorage.setItem('theme', theme);
             });
 
-            // Visitor count
+            // Contador de visitas
             let visitCount = localStorage.getItem('visitCount') || 0;
             visitCount++;
             localStorage.setItem('visitCount', visitCount);
@@ -191,4 +195,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
