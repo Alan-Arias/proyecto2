@@ -17,22 +17,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">                    
                 <li class="nav-item">
-                    <a class="nav-link" href="/users"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
+                    <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link" href="/trabajadors"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
+                    <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/servicios"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Servicios</a>
+                    <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/GestionarVehiculos"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Vehiculos</a>
+                    <a class="nav-link" href="{{ url('/GestionarVehiculos') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Vehiculos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/detalle"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Detalles Vehiculo</a>
+                    <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Detalles Vehiculo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reserva"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Reservas</a>
+                    <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Reservas</a>
                 </li>
             </ul>
         </div>
@@ -43,7 +43,7 @@
     <h2>Registro de Servicios</h2>
     <br>
     @if(isset($Servicios->id))
-    <form action="/ActualizarServicio/{{ $Servicios->id }}" method="POST">
+    <form action="{{ url('/ActualizarServicio/{{ $Servicios->id }}') }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -61,7 +61,7 @@
         <button type="submit" class="btn btn-success">Actualizar</button>
     </form>
     @else
-    <form action="/registrarServicio" method="POST">
+    <form action="{{ url('/registrarServicio') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="nombres" class="form-label">Nombres</label>
@@ -126,7 +126,7 @@
                 <td>{{ $item->duracion_estimada }}</td>
                 <td>{{ $item->estado }}</td>
                 <td>
-                    <a href="/servicio/editar/{{ $item->id }}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ url('/servicio/editar/{{ $item->id }}') }}" class="btn btn-primary btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach
