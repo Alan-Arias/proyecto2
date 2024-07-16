@@ -50,7 +50,7 @@
     <br>
     @if(!empty($Promocion->id))
     @else
-    <form action="/registrarPromocion" method="POST">
+    <form action="{{ url('/registrarPromocion') }}" method="POST">
     @csrf
         <table>
             <tr>
