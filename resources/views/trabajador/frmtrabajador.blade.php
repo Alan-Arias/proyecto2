@@ -53,7 +53,6 @@
 @extends('app3')
 @section('content')
 <div class="container">
-    <h2>Registro de Trabajadores</h2>
     <div class="form-container">
         @if(!empty($Trabajador->id))
         @else
