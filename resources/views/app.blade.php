@@ -103,7 +103,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/vehiculos"><i class="fas fa-car me-1"></i> Reservas y Vehículos</a>
+                        <a class="nav-link" href="{{ url('/vehiculos') }}"><i class="fas fa-car me-1"></i> Reservas y Vehículos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
