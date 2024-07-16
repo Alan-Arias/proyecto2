@@ -56,36 +56,9 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="fas fa-cogs me-2"></i> Taller Servimag</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/GestionarVehiculos') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Vehiculos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Detalles Vehiculo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Reservas</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+@extends('app3')
+
+@section('content')
 
 <h2>Registro de Detalle</h2>
 <br>
@@ -207,6 +180,6 @@
         fila.parentNode.removeChild(fila);
     }
 </script>
-
+@endsection
 </body>
 </html
