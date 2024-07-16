@@ -25,7 +25,7 @@
             </tr>
             <tr>
                 <td>Descripcion Usuario</td>
-                <td><input readonly type="text" id="desc_user" name="desc_user" placeholder="Descripcion del Usuario"></td>
+                <td><input type="text" id="desc_user" name="desc_user" placeholder="Descripcion del Usuario"></td>
             </tr>
             <tr>
                 <td>Nombres</td>
