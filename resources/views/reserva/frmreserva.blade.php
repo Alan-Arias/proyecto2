@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/49f6844fc6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-extends('app3')
+@extends('app3')
 
 @section('content')
 
