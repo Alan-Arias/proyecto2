@@ -143,7 +143,7 @@
 </div>
 @endif
 
-<button class="btn btn-success mt-3"><a href="{{ ('/asigserv') }}" class="text-white text-decoration-none">Asignación de Servicios</a></button>
+<button class="btn btn-success mt-3"><a href="{{ url('/asigserv') }}" class="text-white text-decoration-none">Asignación de Servicios</a></button>
 
 <br><br>
 
