@@ -26,18 +26,26 @@ class LoginController extends Controller
             ->with(['error' => 'Usuario o contraseña incorrecto']);
     }
 
-    // Obtener el campo "nombres" de la tabla "clientes" utilizando un inner join
+    // Obtener el campo "nombres" e "id" de la tabla "clientes" utilizando un inner join
     $cliente = DB::table('clientes')
         ->join('usuarios', 'clientes.usuario_id', '=', 'usuarios.id')
         ->where('usuarios.id', $user->id)
         ->select('clientes.id', 'clientes.nombres') // Incluir el campo 'id' de clientes
         ->first();
 
-    $nombres = $cliente ? $cliente->nombres : 'N/A';
-    $cliente_id = $cliente ? $cliente->id : null;
+    // Obtener el campo "nombres" e "id" de la tabla "trabajadors" utilizando un inner join
+    $trabajador = DB::table('trabajadors')
+        ->join('usuarios', 'trabajadors.usuario_id', '=', 'usuarios.id')
+        ->where('usuarios.id', $user->id)
+        ->select('trabajadors.id', 'trabajadors.nombres') // Incluir el campo 'id' de trabajadors
+        ->first();
 
-    // Guardar el nombre y el id del cliente en la sesión
-    session(['nombres' => $nombres, 'cliente_id' => $cliente_id]);
+    // Guardar el nombre y el id del cliente o trabajador en la sesión según el tipo de usuario
+    if ($user->desc_user == 'cliente' && $cliente) {
+        session(['nombres' => $cliente->nombres, 'cliente_id' => $cliente->id]);
+    } elseif ($user->desc_user == 'trabajador' && $trabajador) {
+        session(['nombres' => $trabajador->nombres, 'trabajador_id' => $trabajador->id]);
+    }
 
     // Verificar el tipo de usuario y redirigir en consecuencia
     if ($user->desc_user == 'trabajador') {
