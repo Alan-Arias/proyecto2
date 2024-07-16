@@ -11,6 +11,7 @@
 extends('app3')
 
 @section('content')
+
 <div class="container mt-4">
     <h2>Reservas del Servicio</h2>
     
