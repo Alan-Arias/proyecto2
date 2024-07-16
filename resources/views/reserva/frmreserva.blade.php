@@ -17,7 +17,7 @@ extends('app3')
     
     <div class="container">
     <div class="form-container">
-        <form action="/registrarReserva" method="POST" class="forms">
+        <form action="{{ url('/registrarReserva') }}" method="POST" class="forms">
             @csrf
             @if(!empty($reserva))
                 @method('PUT') <!-- Método HTTP para actualizar -->
@@ -57,7 +57,7 @@ extends('app3')
         
         @if(!empty($reserva))
             <!-- Si existe una reserva, mostrar el botón de eliminar -->
-            <form action="/eliminarReserva/{{ $reserva->id }}" method="POST">
+            <form action="{{ url ('/eliminarReserva/' . $reserva->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger mt-3">Eliminar Reserva</button>
