@@ -89,7 +89,7 @@
                     <button id="toggle-dark-mode" class="btn btn-secondary">Modo Oscuro</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a class="nav-link" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </div>
