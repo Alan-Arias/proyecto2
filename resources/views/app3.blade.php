@@ -123,7 +123,7 @@
                         <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
+                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promocion</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
