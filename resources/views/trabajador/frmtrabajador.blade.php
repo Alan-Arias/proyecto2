@@ -112,7 +112,18 @@
         @endif
         @endif
     </div>
+<script>
+    function updateDescUser() {
+        var select = document.getElementById("tipo_user");
+        var descUserField = document.getElementById("desc_user");
 
+        if (select.value === "2") {
+            descUserField.value = "cliente";
+        } else if (select.value === "1") {
+            descUserField.value = "trabajador";
+        }
+    }
+</script>
     <div class="table-container">
         <table class="table table-striped table-bordered">
             <thead>
