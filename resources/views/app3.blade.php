@@ -39,20 +39,58 @@
         body.theme-kids {
             background-color: #FFEB3B;
             color: #000;
-            font-size: 16px;
+            font-size: 18px;
         }
+        body.theme-kids .navbar, body.theme-kids .navbar-nav .nav-link, body.theme-kids .btn-outline-light {
+            background-color: #FBC02D;
+            color: #000;
+        }
+        body.theme-kids .btn-outline-light {
+            border-color: #000;
+        }
+        body.theme-kids h1, body.theme-kids h2, body.theme-kids h3 {
+            color: #000;
+        }
+        body.theme-kids .navbar-brand {
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+
         body.theme-teens {
             background-color: #00BCD4;
             color: #FFF;
-            font-size: 18px;
+            font-size: 16px;
         }
+        body.theme-teens .navbar, body.theme-teens .navbar-nav .nav-link, body.theme-teens .btn-outline-light {
+            background-color: #0097A7;
+            color: #FFF;
+        }
+        body.theme-teens .btn-outline-light {
+            border-color: #FFF;
+        }
+        body.theme-teens h1, body.theme-teens h2, body.theme-teens h3 {
+            color: #FFF;
+        }
+        body.theme-teens .navbar-brand {
+            font-family: 'Arial Black', sans-serif;
+        }
+
         body.theme-adults {
             background-color: #3E2723;
             color: #FFF;
-            font-size: 20px;
+            font-size: 14px;
         }
-        .theme-kids .navbar, .theme-teens .navbar, .theme-adults .navbar {
-            background-color: inherit;
+        body.theme-adults .navbar, body.theme-adults .navbar-nav .nav-link, body.theme-adults .btn-outline-light {
+            background-color: #1B1B1B;
+            color: #FFF;
+        }
+        body.theme-adults .btn-outline-light {
+            border-color: #FFF;
+        }
+        body.theme-adults h1, body.theme-adults h2, body.theme-adults h3 {
+            color: #FFF;
+        }
+        body.theme-adults .navbar-brand {
+            font-family: 'Times New Roman', serif;
         }
     </style>
 </head>
@@ -153,3 +191,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
