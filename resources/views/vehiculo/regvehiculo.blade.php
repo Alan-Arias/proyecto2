@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">                    
                 <li class="nav-item">
-                    <a class="nav-link" href="/users"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
+                    <a class="nav-link" href="{{ url('/users') }}"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
                 </li>                
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
