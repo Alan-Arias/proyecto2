@@ -98,7 +98,7 @@
                 <td>{{ $item->duracion_estimada }}</td>
                 <td>{{ $item->estado }}</td>
                 <td>
-                    <a href="{{ url('/servicio/editar/' . {{ $item->id }}) }}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ url('/servicio/editar/' . $item->id) }}" class="btn btn-primary btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach
