@@ -18,7 +18,7 @@
             <tr>
                 <td>Tipo de Usuario</td>
                 <td>
-                    <select name="tipo_user" id="tipo_user">
+                    <select name="tipo_user" id="tipo_user" onchange="updateDescUser()">
                         <option value="2">Cliente</option>
                         <option value="1">Trabajador</option>
                     </select>
@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>Descripcion Usuario</td>
-                <td><input type="text" id="desc_user" name="desc_user" placeholder="Descripcion del Usuario"></td>
+                <td><input readonly type="text" id="desc_user" name="desc_user" placeholder="Descripcion del Usuario"></td>
             </tr>
             <tr>
                 <td>Nombres</td>
