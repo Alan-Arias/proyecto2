@@ -50,6 +50,18 @@
             </tr>
         </table>
     </form>
+<script>
+    function updateDescUser() {
+        var select = document.getElementById("tipo_user");
+        var descUserField = document.getElementById("desc_user");
+
+        if (select.value === "2") {
+            descUserField.value = "cliente";
+        } else if (select.value === "1") {
+            descUserField.value = "trabajador";
+        }
+    }
+</script>
     @if (session('agregar'))
         <div class="alert alert-success mt-3">
             <p>{{ session('agregar') }}</p>
