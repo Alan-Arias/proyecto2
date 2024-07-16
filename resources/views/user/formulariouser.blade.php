@@ -20,7 +20,6 @@
                 <td>
                     <select name="tipo_user" id="tipo_user" onchange="updateDescUser()">
                         <option value="2">Cliente</option>
-                        <option value="1">Trabajador</option>
                     </select>
                 </td>
             </tr>
