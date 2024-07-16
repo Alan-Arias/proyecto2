@@ -5,6 +5,7 @@ use App\Http\Controllers\ConsumirServicioController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\TrabajadorController;
 
 Route::get('/', function () {
     return view('login.login');
@@ -22,6 +23,7 @@ Route::put('/modificar/{id}','App\Http\Controllers\ClienteController@update');
 Route::get('/trabajadors', 'App\Http\Controllers\TrabajadorController@index');
 Route::get('/trabjview', 'App\Http\Controllers\TrabajadorController@index2');
 Route::post('/registrarTr', 'App\Http\Controllers\TrabajadorController@store');
+Route::get('/estadisticas-trabajadores', 'TrabajadorController@verEstadisticasTrabajadores')->name('estadisticas.trabajadores');
 
 Route::get('/vehiculos', 'App\Http\Controllers\VehiculoController@index');
 Route::get('/vehiculosview', 'App\Http\Controllers\VehiculoController@index2');
