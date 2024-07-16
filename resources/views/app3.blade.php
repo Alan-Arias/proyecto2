@@ -134,7 +134,7 @@
                         <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promociones</a>
+                        <a class="nav-link" href="{{ url('/promocion') }}"><i></i>Gestionar Promociones</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
