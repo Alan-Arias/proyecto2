@@ -75,7 +75,6 @@
                     <td>Tipo de Usuario</td>
                     <td>
                         <select name="tipo_user" id="tipo_user">
-                            <option value="2">Cliente</option>
                             <option value="1">Trabajador</option>
                         </select>
                     </td>
