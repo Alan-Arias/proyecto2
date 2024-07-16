@@ -93,6 +93,17 @@
         body.theme-adults .navbar-brand {
             font-family: 'Times New Roman', serif;
         }
+
+        /* Estilo del contador de visitas */
+        #visitorCount {
+            background-color: #007BFF;
+            color: #FFF;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -122,8 +133,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Reservas</a>
                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promocion</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/promocion') }}"><i class="fas fa-calendar-check me-1"></i>Gestionar Promociones</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -139,11 +150,11 @@
                         </select>
                     </li>
                     <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn btn-link nav-link"><i class="fas fa-sign-out-alt me-1"></i>Cerrar sesión</button>
-                        </form>
-                    </li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-link nav-link"><i class="fas fa-sign-out-alt me-1"></i>Cerrar sesión</button>
+                            </form>
+                        </li>
                 </ul>
             </div>
         </div>
