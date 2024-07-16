@@ -139,7 +139,10 @@
                         </select>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-link nav-link"><i class="fas fa-sign-out-alt me-1"></i>Cerrar sesión</button>
+                        </form>
                     </li>
                 </ul>
             </div>
