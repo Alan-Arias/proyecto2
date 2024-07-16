@@ -136,11 +136,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/promocion') }}"><i></i>Gestionar Promociones</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('estadisticas.trabajadores') }}">
-                            <i class="fas fa-chart-pie me-1"></i> Ver Estadísticas de Trabajadores
-                        </a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
