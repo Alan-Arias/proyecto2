@@ -52,19 +52,19 @@
                     <a class="nav-link" href="/users"><i class="fas fa-car me-1"></i>Gestionar Usuarios</a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link" href="/trabajadors"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
+                    <a class="nav-link" href="{{ url('/trabajadors') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Trabajadores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/servicios"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Servicios</a>
+                    <a class="nav-link" href="{{ url('/servicios') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/GestionarVehiculos"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Vehiculos</a>
+                    <a class="nav-link" href="{{ url('/GestionarVehiculos') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Vehiculos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/detalle"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Detalles Vehiculo</a>
+                    <a class="nav-link" href="{{ url('/detalle') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Detalles Vehiculo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reserva"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Reservas</a>
+                    <a class="nav-link" href="{{ url('/reserva') }}"><i class="fas fa-money-bill-alt me-1"></i>Gestionar Reservas</a>
                 </li>
             </ul>        
         </div>
@@ -75,7 +75,7 @@
     @if(!empty($Vehiculo->id))
     @else
     <div class="forms">
-        <form action="/GuardarVehiculo" method="POST">
+        <form action="{{ url('/GuardarVehiculo') }}" method="POST">
             @csrf
             <h2>Registro de Vehículo</h2>
             <table>
